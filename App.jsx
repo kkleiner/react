@@ -23,8 +23,7 @@ objectID: 1,
 },
 ];
 
-function App() {
-	return (
+const App = () => (
 		<div id="main">
 		<h1> {welcome.greeting} {welcome.name}</h1>
 		<Search />
@@ -34,10 +33,8 @@ function App() {
 		<List />
 		</div>
 		);
-	}
 
-function List() {
-		return (
+const List = () => (
 		<ul>
 		{list.map(function (item)  {
 			return ( 
@@ -50,15 +47,12 @@ function List() {
 		}
 		</ul>
 );
-}
 
-function Search() {
-	return (
+const Search = () => ( 
 		<div>
 		<label htmlFor="search">Search: </label>
 		<input id="search" type="text" />
 		</div>
 );
-}
 
 export default App;
